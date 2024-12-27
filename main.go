@@ -3,12 +3,13 @@ package main
 import (
 	"WelcomeGO/myutil"
 	"fmt"
+    "WelcomeGO/LearnPrintStatement"
 )
 
 func main() {
 	fmt.Println("Welcome to Learning GoLang !!")
 	myutil.Helper("This message from Helper func")
-
+    LearnPrintStatement.LearnPrint();
 	//variables 
 	var name string = "Himanshu"
 	fmt.Println(name)
