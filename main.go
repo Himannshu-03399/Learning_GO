@@ -4,11 +4,23 @@ import (
 	"WelcomeGO/myutil"
 	"fmt"
     "WelcomeGO/LearnPrintStatement"
+	
 )
+
+/*
+If we have multiple Go files with the same package name (main or whatever)
+and each defines its own main() function within the same folder,
+the Go compiler will throw an error when you attempt to build or run entire package
+or more than one file at the same time. However, if you run a single file at a time,
+only that file and its dependencies are considered, and no error or warning occurs
+because other main() functions in the folder are ignored.
+
+*/
 
 func main() {
 	fmt.Println("Welcome to Learning GoLang !!")
 	myutil.Helper("This message from Helper func")
+	myutil.Demo("Note, if you want to export variable or methods outside of package/folder then it should be start with UpperCase ")
     LearnPrintStatement.LearnPrint();
 	//variables 
 	var name string = "Himanshu"
@@ -36,5 +48,7 @@ func main() {
 
 	// Exported from other file, SO there variable name should be staring from Capital letters
 	fmt.Println(myutil.Persion)
+	myutil.Helper("Just now myutils/Helper function is called")
+
 
 }
