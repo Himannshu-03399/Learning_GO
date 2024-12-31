@@ -4,6 +4,8 @@ import "fmt"
 
 func main() {
 	fmt.Println("Welcome to Learning functions in GO")
+
+	//add:=sum(20,10) this type of variable declaration only valid within functions , otherwise ( var ans = sum(10,20) in general)
 	add := sum(10,5) // storing output of sum function into add variable
 	fmt.Println("Addition of two digits using sum is :" ,add)
 	product := multiply(5.9 , 8)
